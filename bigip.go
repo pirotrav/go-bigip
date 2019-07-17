@@ -164,7 +164,7 @@ func (b *BigIP) APICall(options *APIRequest) ([]byte, error) {
 		req.SetBasicAuth(b.User, b.Password)
 	}
 
-	//fmt.Println("REQ -- ", options.Method, " ", url," -- ",options.Body)
+	fmt.Println("REQ -- ", options.Method, " ", url," -- ",options.Body)
 
 	if len(options.ContentType) > 0 {
 		req.Header.Set("Content-Type", options.ContentType)
